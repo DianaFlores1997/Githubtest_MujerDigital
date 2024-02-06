@@ -26,5 +26,24 @@ Para que git empiece a hacer seguimiento de las versiones de un archivo, debemos
 comando git add
 Si quiero agregar un solo archivo, es git add y el nombre del archivo (ejemplo, git add file1.txt)
 pero si quiero agregar todos los archivos de una carpeta, es con git add -a o sino git add .
-para crear una version es con git commit y entre "" debemos poner el mensaje en el que pongsmod
+para crear una version es con git commit -m y entre "" debemos poner el mensaje en el que pongsmod
 que es lo que cambiamos
+Para abrir la terminal en visual studio se escribe code . y me abre la carpeta en la que estoy
+En source control podemos tambien hacer nuevas versiones en commit.
+Para crear nuevas branches (para que varias perso nas trabajen en el mismo archivo con versiones diferentes
+y no tengan que estarse chocando entre si), se utiliza el comando git branch branchnueva, en donde branchnueva
+representaria el nombre de la nueva rama (ejemplo, si queremos crear una nueva branch que se llame usuarios, 
+escribiriamos git branch usuarios)
+Para cambiarse de rama se usa git checkout y luego el nombre de la rama a la que quiero cambiarme
+Ejemplo seria, git checkout usuarios
+Para crear una branch y moverse a ella al mismo tiempo se usa git checkout -b
+Ejemplo si quisiera hacer otra branch llamada clientes y moverme a ella, seria checkout -b clientes
+para cambiarle el nombre a una branch debemos primero posicionarnos en la branch a la que queremos cambiarle
+el nombre y luego escribir git branch -m y el nombre nuevo que qqueremos que tenga la branch
+Para borrar una branch, hay que salirse de ella y luego escribir git branch -D y el nombre de la branch
+que queremos eliminar
+Para unir los cambios hechos en dos branches diferentes, se usa git merge nombredelabranchalaquequierometerleloscambios
+Tenemos que primero ponernos en la branch en la que queremos que se unan los cambios (normalmente, la master).
+Para ver las branches existentes y sus nombres, se usa el comando git branch
+Para guardar cambios sin crear una version, se usa el comando git stash para que se guarden los cambios en una branch y poder
+moverte a otra branch
