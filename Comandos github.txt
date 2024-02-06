@@ -1,0 +1,30 @@
+PRimero hay que abrir la app Terminal
+Despues, debemos checar si esta bien instalado y para eso escribimos git --version
+Ahora, hay que definir variables globales. Esto sirve para poner nombre y correo electronico
+de quienes hicieron los cambios.
+se escribe 'git config --global user.name "Nombre Nombre"'
+y despues 'git config --global user.email "email@email.com"'
+Para asegurarnos que se guardaron, se utiliza un comando para leer que es -l
+y se usa asi: 'git config --global -l' y en teoria se veria lo que pusimos.
+Para limpiar la terminal, se usa clear.
+Para leer lo archivos y carpetas en las que estoy parado,\
+se utiliza 'dir' o 'ls'
+Para entrar en una carpeta desde la terminal se usa 'cd' y el nombre de la
+carpeta, luego tabulador y se va a escribir solo el nombre, o sino le damos
+a tabulador hasta que si nos de la carpeta a la que queremos ir
+Para regresar de carpeta, se utiliza 'cd ..' y esto hara que te vayas
+una carpeta atras.
+Para crear una carpeta desde la terminal, se usa el comando 'mkdir' y el nombre de la
+carpeta, luego le damos ls para checar si se creo bien.
+Para crear un archivo, se escribe type nul > y el nombre del archivo con su
+. y el tipo (ejemplo type nul > file1.txt)
+Para empezar a usar git para crear versiones, debemos crear un repositorio
+Para crear un repositorio, debemos escribir git init y enter
+Este se creara como un archivo oculto, para leer archivos ocultos y ver que se creo correctamente
+nuestro repositorio se escribe dir -Hidden
+Para que git empiece a hacer seguimiento de las versiones de un archivo, debemos usar el
+comando git add
+Si quiero agregar un solo archivo, es git add y el nombre del archivo (ejemplo, git add file1.txt)
+pero si quiero agregar todos los archivos de una carpeta, es con git add -a o sino git add .
+para crear una version es con git commit y entre "" debemos poner el mensaje en el que pongsmod
+que es lo que cambiamos
