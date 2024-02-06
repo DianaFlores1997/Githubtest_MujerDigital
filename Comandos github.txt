@@ -46,4 +46,9 @@ Para unir los cambios hechos en dos branches diferentes, se usa git merge nombre
 Tenemos que primero ponernos en la branch en la que queremos que se unan los cambios (normalmente, la master).
 Para ver las branches existentes y sus nombres, se usa el comando git branch
 Para guardar cambios sin crear una version, se usa el comando git stash para que se guarden los cambios en una branch y poder
-moverte a otra branch
+moverte a otra branch. 
+Cuando regreses a tu branch, los cambios no los vas a ver. Lo que tienes que hacer entonces es aplicar un git stash apply, y te
+apareceran los documentos que dejaste sin guardar. En ese momento haras un git add -A, luego un git commit -m y le pones lo que
+quieras que describa a esa version y ya te apareceran de nuevo esos cambios que dejaste en stash.
+Para cambiarle la descripcion a un commit se usa git commit --amend "" y entre las comillas va el texto al que quieres cambiar tu
+commit.
