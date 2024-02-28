@@ -52,3 +52,24 @@ apareceran los documentos que dejaste sin guardar. En ese momento haras un git a
 quieras que describa a esa version y ya te apareceran de nuevo esos cambios que dejaste en stash.
 Para cambiarle la descripcion a un commit se usa git commit --amend "" y entre las comillas va el texto al que quieres cambiar tu
 commit.
+Para crear un repositorio remoto en github es necesario tener una cuenta en github, entramos y en el lado derecho hay un boton con
+un signo de + que dice create new, luego le damos clic a new repository.
+Te llevara a una nueva pantalla en donde tendras que ponerle nombre al repositorio y una descripcion (opcional), y podras elegir
+si quieres que sea privado o publico. Cuando es publico, cualquier persona con el link podra acceder a el, y si es privado solamente
+las personas que inviten podran colaborar.
+Para ligarlo a nuestro repositorio remoto, hay que descargar Github CLI, y para checar que este instalado correctamente en la terminal
+estando dentro de nuestra carpeta escribiremos el comando gh --version
+Nos tiene que arrojar una version del gh que hayamos instalado.
+Ahora escribiremos gh auth login
+nos preguntara con que cuenta queremos iniciar sesion y vamos a elegir github.com, luego nos va a preguntar el protocolo preferido y 
+vamos a seleccionar SSH, luego nos pedira crear una llave, luego nos preguntara como queremos identificarnos y le daremos que por
+navegador web, nos dara un codigo que copiamos y le damos enter y nos llevara a una pagina web donde tenemos que entrar esos numeros
+Con eso ya podremos vincular el repositorio remoto con el local. Ve en la web a quick setup y ve que empiece la url con git@github,
+copiamos esa url y en nuestra terminal debemos asegurarnos que estamos en la rama main, y escribiremos git remote add origin git@githubabcidj
+donde lo ultimo es la url que copiamos.
+Para saber si se agrego bien, escribiremos en la terminal git remote -v
+Para subir los cambios de mi computadora al repositorio remoto, vamos a escribir en la terminal git push origin main
+Esto significa que subira los cambios a nuestro repositorio remoto origin a una rama llamada main.
+Ojo que esta rama main no es la misma que la rama main que tenemos en nuestro repositorio local, simplemente es otra rama que existe en
+nuestro repositorio remoto.
+Cada que queramos subir los cambios debemos hacer lo mismo (git push origin main)
