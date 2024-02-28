@@ -71,5 +71,18 @@ Para saber si se agrego bien, escribiremos en la terminal git remote -v
 Para subir los cambios de mi computadora al repositorio remoto, vamos a escribir en la terminal git push origin main
 Esto significa que subira los cambios a nuestro repositorio remoto origin a una rama llamada main.
 Ojo que esta rama main no es la misma que la rama main que tenemos en nuestro repositorio local, simplemente es otra rama que existe en
-nuestro repositorio remoto.
+nuestro repositorio remoto. Este es solo para crear una rama en el remoto que va a tener la misma informacion, pero como si nosotros la
+estuvieramos copiando de un lado al otro.
 Cada que queramos subir los cambios debemos hacer lo mismo (git push origin main)
+Para subir una rama de nuestro repositorio local al remoto, haciendo una conexion directa y no solo creando una rama con el mismo nombre
+en el repositorio remoto, debemos primero cambiarnos a la rama que queremos subir al repositorio remoto, el comando seria
+git push --set-upstream origin nombredelarama
+Asi, cuando queramos pasar la informacion solo debemos escribir git pull y no git pull origin nombredelarama.
+Para que una rama que creamos de la otra forma se pase a ser como en este formato, escribiremos
+git branch --set-upstream-to-origin/nombredelarama nombredelarama
+
+PULL REQUEST.
+Un pull request es una solicitud para merge una rama con otra. Se puede hacer sin el pull request? Si, pero lo ideal es hacerlo para que
+el resto de las personas trabajando en ese repositorio suban sus cambios y que las cosas salgan mejor.
+Estos cambios son aprobados por team leaders para que chequen si se puede o no unificar los cambios.
+Para hacer un pull request 
